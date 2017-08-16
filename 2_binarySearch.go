@@ -10,12 +10,15 @@ func binarySearchMain() {
 	sort.Ints(data)
 	fmt.Println(data)
 	itemToSearch := 98
-	key := binarySearch(itemToSearch, data)
+	key := binarySearch{}.indexOf(itemToSearch, data)
 	fmt.Printf("%d found at position: %d", itemToSearch, key)
 	fmt.Println("")
 }
 
-func binarySearch(key int, input []int) int {
+type binarySearch struct {
+}
+
+func (b binarySearch) indexOf(key int, input []int) int {
 	low := 0
 	high := len(input) - 1
 	for low <= high {

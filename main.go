@@ -2,5 +2,8 @@ package main
 
 func main() {
 	//gcdMain()
-	binarySearchMain()
+	//binarySearchMain()
+	//pailndromeMain()
+	//stringSortedMain()
+	bagMain()
 }
