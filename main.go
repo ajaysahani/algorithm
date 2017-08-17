@@ -7,7 +7,7 @@ import (
 )
 
 func main() {
-	testLib()
+	//testLib()
 	//tpMain()
 	//gcdMain()
 	//binarySearchMain()
@@ -15,7 +15,8 @@ func main() {
 	//stringSortedMain()
 	//bagMain()
 	//stackMain()
-
+	//queueMain()
+	threeSumMain()
 }
 
 func testLib() {
