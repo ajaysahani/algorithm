@@ -26,7 +26,11 @@ func quickFindUFMain() {
 		rows := strings.Split(value, " ")
 		p, _ := strconv.Atoi(strings.TrimSpace(rows[0]))
 		q, _ := strconv.Atoi(strings.TrimSpace(rows[1]))
-		if !qf.connected(p, q) {
+		conn, err := qf.connected(p, q)
+		if err != nil {
+			fmt.Println(err)
+		}
+		if !conn {
 			qf.union(p, q)
 			fmt.Println(p, "and", q, "connected")
 		}
@@ -61,23 +65,25 @@ func (uf *quickFindUF) find(p int) (int, error) {
 }
 
 func (uf *quickFindUF) validate(p int) (err error) {
-	if p < 0 || p >= uf.count {
+	if p < 0 || p >= len(uf.id) {
 		msg := fmt.Sprintf("Illegal Argument Exception index %d is not in range between 0 and %d ", p, (uf.count - 1))
 		err = errors.New(msg)
 	}
 	return err
 }
 
-func (uf *quickFindUF) connected(p, q int) bool {
+func (uf *quickFindUF) connected(p, q int) (bool, error) {
+	conn := false
 	err := uf.validate(p)
 	if err != nil {
-		return false
+		return conn, err
 	}
 	err = uf.validate(q)
 	if err != nil {
-		return false
+		return conn, err
 	}
-	return uf.id[p] == uf.id[q]
+	conn = uf.id[p] == uf.id[q]
+	return conn, err
 }
 
 func (uf *quickFindUF) union(p, q int) (err error) {
