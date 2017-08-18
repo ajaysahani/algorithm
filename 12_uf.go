@@ -8,21 +8,7 @@ import (
 	"github.com/practice/algorithm/lib"
 )
 
-func main() {
-	//testLib()
-	//tpMain()
-	//gcdMain()
-	//binarySearchMain()
-	//pailndromeMain()
-	//stringSortedMain()
-	//bagMain()
-	//stackMain()
-	//queueMain()
-	//threeSumMain()
-	quickFindUFMain()
-}
-
-func testLib() {
+func ufMain() {
 	fileName := "tinyUF.txt"
 	output, err := lib.ReadAllString(fileName)
 	if err != nil {
@@ -38,5 +24,8 @@ func testLib() {
 		val2, _ := strconv.Atoi(strings.TrimSpace(rows[1]))
 		fmt.Println(val1, ":", val2)
 	}
-	//fmt.Println(len(output))
+}
+
+//uf union find
+type uf struct {
 }
