@@ -1,4 +1,4 @@
-package main
+package general
 
 import (
 	"fmt"
@@ -6,7 +6,8 @@ import (
 	"github.com/practice/algorithm/lib"
 )
 
-func threeSumMain() {
+//ThreeSumMain unit test
+func ThreeSumMain() {
 	fileName := "1Kints.txt"
 	output, _ := lib.ReadAllInt(fileName)
 	tsum := &threeSum{}

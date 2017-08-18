@@ -1,11 +1,12 @@
-package main
+package stackQueue
 
 import (
 	"errors"
 	"fmt"
 )
 
-func bagMain() {
+//BagMain unit test
+func BagMain() {
 	bg := &bag{}
 	bg.add("ajay")
 	bg.add("Rachana")

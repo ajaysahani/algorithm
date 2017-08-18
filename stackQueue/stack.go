@@ -1,11 +1,12 @@
-package main
+package stackQueue
 
 import (
 	"errors"
 	"fmt"
 )
 
-func stackMain() {
+//StackMain unit testing
+func StackMain() {
 	s := &stack{}
 	s.push("ajay")
 	s.push("sanjay")

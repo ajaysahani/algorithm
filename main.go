@@ -6,20 +6,21 @@ import (
 	"strings"
 
 	"github.com/practice/algorithm/lib"
+	"github.com/practice/algorithm/unionFind"
 )
 
 func main() {
 	//testLib()
 	//tpMain()
-	//gcdMain()
-	//binarySearchMain()
-	//pailndromeMain()
-	//stringSortedMain()
-	//bagMain()
-	//stackMain()
-	//queueMain()
-	//threeSumMain()
-	quickFindUFMain()
+	//general.GcdMain()
+	//general.BinarySearchMain()
+	//general.PailndromeMain()
+	//general.StringSortedMain()
+	//general.ThreeSumMain()
+	//stackQueue.BagMain()
+	//stackQueue.StackMain()
+	//stackQueue.QueueMain()
+	unionFind.QuickFindUFMain()
 }
 
 func testLib() {

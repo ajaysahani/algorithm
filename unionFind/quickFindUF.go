@@ -1,4 +1,4 @@
-package main
+package unionFind
 
 import (
 	"errors"
@@ -9,7 +9,8 @@ import (
 	"github.com/practice/algorithm/lib"
 )
 
-func quickFindUFMain() {
+//QuickFindUFMain unit testing
+func QuickFindUFMain() {
 	fileName := "tinyUF.txt"
 	output, err := lib.ReadAllString(fileName)
 	if err != nil {

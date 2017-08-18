@@ -1,11 +1,12 @@
-package main
+package stackQueue
 
 import (
 	"errors"
 	"fmt"
 )
 
-func queueMain() {
+//QueueMain unit testing
+func QueueMain() {
 	que := &queue{}
 	que.enque("ajay")
 	que.enque("sanjay")

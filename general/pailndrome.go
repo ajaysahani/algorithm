@@ -1,11 +1,12 @@
-package main
+package general
 
 import (
 	"fmt"
 	"strings"
 )
 
-func pailndromeMain() {
+//PailndromeMain unit test
+func PailndromeMain() {
 	checkString := "Nitin"
 	output := pailndrome{}.isPailndrome(checkString)
 	fmt.Println(checkString, " is palindrome:", output)

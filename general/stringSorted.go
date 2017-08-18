@@ -1,11 +1,12 @@
-package main
+package general
 
 import (
 	"fmt"
 	"strings"
 )
 
-func stringSortedMain() {
+//StringSortedMain unit test
+func StringSortedMain() {
 	str := "abcd"
 	sorted := stringSorted{}.isStringSorted(str)
 	fmt.Println(str, " is sorted:", sorted)

@@ -1,11 +1,12 @@
-package main
+package general
 
 import (
 	"fmt"
 	"sort"
 )
 
-func binarySearchMain() {
+//BinarySearchMain unit test
+func BinarySearchMain() {
 	data := []int{12, 67, -1, 98, -67, 45, 89}
 	sort.Ints(data)
 	fmt.Println(data)

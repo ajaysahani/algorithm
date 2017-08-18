@@ -1,4 +1,4 @@
-package main
+package stackQueue
 
 //Item placeholder for type
 type Item interface{}

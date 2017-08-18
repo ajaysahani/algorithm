@@ -1,8 +1,9 @@
-package main
+package general
 
 import "fmt"
 
-func gcdMain() {
+//GcdMain unit test
+func GcdMain() {
 	fmt.Println("Hello GCD")
 	p := 2
 	q := 0
