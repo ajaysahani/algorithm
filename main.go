@@ -20,7 +20,8 @@ func main() {
 	//stackQueue.BagMain()
 	//stackQueue.StackMain()
 	//stackQueue.QueueMain()
-	unionFind.QuickFindUFMain()
+	//unionFind.QuickFindMain()
+	unionFind.QuickUnionMain()
 }
 
 func testLib() {

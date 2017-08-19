@@ -9,14 +9,14 @@ import (
 	"github.com/practice/algorithm/lib"
 )
 
-//QuickFindUFMain unit testing
-func QuickFindUFMain() {
+//QuickFindMain unit testing
+func QuickFindMain() {
 	fileName := "tinyUF.txt"
 	output, err := lib.ReadAllString(fileName)
 	if err != nil {
 		fmt.Println(err)
 	}
-	qf := &quickFindUF{}
+	qf := &quickFind{}
 	for index, value := range output {
 		if index == 0 {
 			count, _ := strconv.Atoi(strings.TrimSpace(value))
@@ -40,12 +40,12 @@ func QuickFindUFMain() {
 	fmt.Println("Final array:", qf.id)
 }
 
-type quickFindUF struct {
+type quickFind struct {
 	id    []int
 	count int
 }
 
-func (uf *quickFindUF) init(size int) {
+func (uf *quickFind) init(size int) {
 	uf.id = make([]int, size)
 	uf.count = size
 	for i := 0; i < size; i++ {
@@ -53,11 +53,11 @@ func (uf *quickFindUF) init(size int) {
 	}
 }
 
-func (uf *quickFindUF) size() int {
+func (uf *quickFind) size() int {
 	return uf.count
 }
 
-func (uf *quickFindUF) find(p int) (int, error) {
+func (uf *quickFind) find(p int) (int, error) {
 	err := uf.validate(p)
 	if err != nil {
 		return -1, err
@@ -65,15 +65,15 @@ func (uf *quickFindUF) find(p int) (int, error) {
 	return uf.id[p], err
 }
 
-func (uf *quickFindUF) validate(p int) (err error) {
+func (uf *quickFind) validate(p int) (err error) {
 	if p < 0 || p >= len(uf.id) {
-		msg := fmt.Sprintf("Illegal Argument Exception index %d is not in range between 0 and %d ", p, (uf.count - 1))
+		msg := fmt.Sprintf("Illegal Argument Exception index %d is not in range between 0 and %d ", p, len(uf.id)-1)
 		err = errors.New(msg)
 	}
 	return err
 }
 
-func (uf *quickFindUF) connected(p, q int) (bool, error) {
+func (uf *quickFind) connected(p, q int) (bool, error) {
 	conn := false
 	err := uf.validate(p)
 	if err != nil {
@@ -87,7 +87,7 @@ func (uf *quickFindUF) connected(p, q int) (bool, error) {
 	return conn, err
 }
 
-func (uf *quickFindUF) union(p, q int) (err error) {
+func (uf *quickFind) union(p, q int) (err error) {
 	err = uf.validate(p)
 	if err != nil {
 		return err
