@@ -21,7 +21,8 @@ func main() {
 	//stackQueue.StackMain()
 	//stackQueue.QueueMain()
 	//unionFind.QuickFindMain()
-	unionFind.QuickUnionMain()
+	//unionFind.QuickUnionMain()
+	unionFind.WeightedQuickUnionMain()
 }
 
 func testLib() {
