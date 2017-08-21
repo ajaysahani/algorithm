@@ -6,24 +6,42 @@ import (
 	"strings"
 
 	"github.com/practice/algorithm/lib"
-	"github.com/practice/algorithm/unionFind"
+	"github.com/practice/algorithm/sorting"
 )
 
 func main() {
 	//testLib()
 	//tpMain()
+	//gen()
+	//stackQue()
+	//uf()
+	sort()
+}
+
+func sort() {
+	//sorting.SelectionMain()
+	sorting.InsertionMain()
+}
+
+func uf() {
+	//unionFind.QuickFindMain()
+	//unionFind.QuickUnionMain()
+	//unionFind.WeightedQuickUnionMain()
+	//unionFind.UfMain()
+}
+
+func stackQue() {
+	//stackQueue.BagMain()
+	//stackQueue.StackMain()
+	//stackQueue.QueueMain()
+}
+
+func gen() {
 	//general.GcdMain()
 	//general.BinarySearchMain()
 	//general.PailndromeMain()
 	//general.StringSortedMain()
 	//general.ThreeSumMain()
-	//stackQueue.BagMain()
-	//stackQueue.StackMain()
-	//stackQueue.QueueMain()
-	//unionFind.QuickFindMain()
-	//unionFind.QuickUnionMain()
-	//unionFind.WeightedQuickUnionMain()
-	unionFind.UfMain()
 }
 
 func testLib() {

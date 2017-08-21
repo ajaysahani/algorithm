@@ -2,6 +2,7 @@ package lib
 
 import (
 	"bufio"
+	"math/rand"
 	"os"
 	"strconv"
 	"strings"
@@ -47,4 +48,13 @@ func ReadAllInt(fileName string) (output []int, err error) {
 		output[index] = mValue
 	}
 	return output, err
+}
+
+//GenerateRandInts generate random ints
+func GenerateRandInts(count int) []int {
+	input := make([]int, count)
+	for i := 0; i < count; i++ {
+		input[i] = rand.Intn(99)
+	}
+	return input
 }

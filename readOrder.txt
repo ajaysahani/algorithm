@@ -1,4 +1,11 @@
 Read Order:
 1:general package
+
 2:stackQueue
+a:bag , b:stack , c:queue
+
 3:unionFind
+a:quickFind , b:quickUnion , c:weightedQuickUnion , d:ufFinal
+
+4:sorting
+a:selection
