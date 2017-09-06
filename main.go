@@ -20,7 +20,8 @@ func main() {
 
 func sort() {
 	//sorting.SelectionMain()
-	sorting.InsertionMain()
+	//sorting.InsertionMain()
+	sorting.ShellMain()
 }
 
 func uf() {

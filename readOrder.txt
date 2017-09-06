@@ -8,4 +8,4 @@ a:bag , b:stack , c:queue
 a:quickFind , b:quickUnion , c:weightedQuickUnion , d:ufFinal
 
 4:sorting
-a:selection
+a:selection , b:insertion
