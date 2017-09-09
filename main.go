@@ -21,7 +21,8 @@ func main() {
 func sort() {
 	//sorting.SelectionMain()
 	//sorting.InsertionMain()
-	sorting.ShellMain()
+	//sorting.ShellMain()
+	sorting.MergeMain()
 }
 
 func uf() {
